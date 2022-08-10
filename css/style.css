@@ -1,0 +1,42 @@
+.icono{
+    position: relative;
+}
+
+.icono img{
+    height: 35px;
+    width: 35px;
+}
+.icono .numero{
+    background-color: yellow;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 45%;
+    top: 0%;
+}
+
+.logoStylos{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 50px;
+    
+}
+
+
+.primerSweet {
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Lato';
+    margin: 5px;
+    text-transform: uppercase;
+    outline: none;
+    }
+
+    button:hover {
+    background: orange;
+    }
