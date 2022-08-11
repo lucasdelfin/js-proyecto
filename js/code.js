@@ -177,7 +177,7 @@ function calcularTotal() {
 * Varia el carrito y vuelve a dibujarlo
 */
 function vaciarCarrito() {
-    document.querySelector(".segundoBoton").addEventListener("click", function() {
+    +document.querySelector(".segundoBoton").addEventListener("click", function() {
         Swal.fire({
         title: "Estas seguro de vaciar el carrito de compras ?",
         type: "info",
@@ -188,17 +188,20 @@ function vaciarCarrito() {
         reverseButtons: true,
         focusConfirm: false,
         focusCancel: true
-        });
+        }).then((result) => {
+            if (result.value) {
+             // Limpiamos los productos guardados
+            carrito = [];
+            // Renderizamos los cambios
+            renderizarCarrito();
+            // Borra LocalStorage
+            localStorage.clear();
+            conteoCarrito()
+            }
+        })
         
-        });
+        });   
 
-    // Limpiamos los productos guardados
-    carrito = [];
-    // Renderizamos los cambios
-    renderizarCarrito();
-    // Borra LocalStorage
-    localStorage.clear();
-    conteoCarrito()
 
 }
 document.querySelector(".primerSweet").addEventListener('click', function(){
