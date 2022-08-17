@@ -1,45 +1,6 @@
- // Variables
- const baseDeDatos = [
-    {
-        id: 1,
-        nombre: 'RTX 3070 WHITE',
-        precio: 200000,
-        imagen: '3070 white.jpg'
-    },
-    {
-        id: 2,
-        nombre: 'RTX 3070',
-        precio: 180000,
-        imagen: 'rtx 3070 .jpg'
-    },
-    {
-        id: 3,
-        nombre: 'MSI 1660',
-        precio: 120000,
-        imagen: 'placa de video 1660.jpg'
-    },
-    {
-        id: 4,
-        nombre: '5700 XT AOROUS ',
-        precio: '350000',
-        imagen: '5700 aorus.jpg'
-    },
-    {
-        id: 4,
-        nombre: 'Gabinete ',
-        precio: '350000',
-        imagen: 'gabinete.jpg'
-    },
-    {
-        id: 4,
-        nombre: 'HypereX  ',
-        precio: '21000',
-        imagen: 'hyperx.jpg'
-    }
-
-];
 
 let carrito = [];
+let bdCarrito=[];
 const divisa = '$';
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
@@ -52,8 +13,16 @@ const miLocalStorage = window.localStorage;
 /**
 * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
 */
+obtenerProductos();
+async function obtenerProductos()  {
+    const data = await fetch("../scrips/compus.json");
+    bdCarrito=await data.json();
+    localStorage.setItem('carrito',JSON.stringify(bdCarrito));
+};
+
 function renderizarProductos() {
-    baseDeDatos.forEach((item) => {
+    const bdCarrito =  JSON.parse(localStorage.getItem('carrito'));
+    bdCarrito.forEach((item) => {
         // Estructura
         const miNodo = document.createElement('div');
         miNodo.classList.add('card', 'col-sm-4');
