@@ -3,36 +3,36 @@
         "id": 1,
         "nombre": "RTX 3070 WHITE",
         "precio": 200000,
-        "imagen": "3070 white.jpg"
+        "imagen": "3070_white.jpg"
     },
     {
         "id": 2,
-        "nombre": "RTX 3070",
+        "nombre": "RTX3070",
         "precio": 180000,
-        "imagen": "rtx 3070 .jpg"
+        "imagen": "plaquita.jpg"
     },
     {
         "id": 3,
         "nombre": "MSI 1660",
         "precio": 120000,
-        "imagen": "placa de video 1660.jpg"
+        "imagen": "placa_de_video_1660.jpg"
     },
     {
         "id": 4,
-        "nombre": "5700 XT AOROUS ",
+        "nombre": "5700 XT AOROUS",
         "precio": 350000,
-        "imagen": "5700 aorus.jpg"
+        "imagen": "5700_aorus.jpg"
     },
     {
-        " id": 4,
-        "nombre": "Gabinete ",
+        "id": 5,
+        "nombre": "Gabinete",
         "precio": 350000,
         "imagen": "gabinete.jpg"
     },
     {
-        "id": 4,
-        "nombre": "HypereX ",
+        "id": 6,
+        "nombre": "hyperx",
         "precio": 21000,
-        "imagen": " hyperx.jpg"
+        "imagen": "hyperx.jpg"
     }
 ]
