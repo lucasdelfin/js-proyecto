@@ -165,7 +165,8 @@ function vaciarCarrito() {
 
 
 }
-document.querySelector(".primerSweet").addEventListener('click', function () {
+document.querySelector(".primerSweet").addEventListener('click', function (e) {
+    e.preventDefault();
     Swal.fire("Suscripcion realizada", "Gracias por suscribirte a nuestra pagina !", "success");
 });
 
